@@ -121,6 +121,13 @@ input:focus,select:focus{border-color:var(--olive)}
 .toast{position:fixed;left:50%;bottom:96px;transform:translate(-50%,20px);opacity:0;z-index:90;background:var(--ink);color:var(--bg);padding:12px 22px;border-radius:999px;font-size:.9rem;pointer-events:none;transition:all .4s;max-width:90vw;text-align:center}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(max-width:759px){
+  nav{top:6px;margin:6px 8px 0}
+  nav .in{height:46px;padding:0 18px;justify-content:center}
+  nav .in .pill,.stage .pill{display:none}
+  .logo{font-size:1.5rem}
+  .stage{padding-top:6px}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -188,12 +195,12 @@ const MESSENGER_LINK = "https://www.messenger.com/t/118441451362301/";
 const CREDIT_LINK    = "https://digiteralevisystem.vercel.app/";
 // Cloudinary URLs. Empty = soft gradient placeholder.
 const HERO_VIDEO = "https://res.cloudinary.com/dqo0bc4u/video/upload/v1791787358/12427585_3840_2160_24fps_at4lwj.mp4";   // hero video inside the blob
-const IMG = { hero:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791787798/pexels-sokil-2159771144-38975727_mdfzdr.jpg", 
-             p1:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791789712/Grassy_residential_lot_overlooki__20261012152139_teylva.jpg", 
-             p2:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791789820/Clifftop_villa_overlooking_turqu__20261012152330_uwp4pt.jpg", 
-             p3:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791070/Modern_tropical_two-storey_house_20261012154419_xirxum.jpg", 
-             p4:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791133/Beachfront_lot_with_palms_20261012154521_eklntl.jpg", 
-             p5:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791242/Modern_timber_A-frame_home_20261012154708_luvtvl.jpg", 
+const IMG = { hero:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791787798/pexels-sokil-2159771144-38975727_mdfzdr.jpg",
+             p1:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791789712/Grassy_residential_lot_overlooki__20261012152139_teylva.jpg",
+             p2:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791789820/Clifftop_villa_overlooking_turqu__20261012152330_uwp4pt.jpg",
+             p3:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791070/Modern_tropical_two-storey_house_20261012154419_xirxum.jpg",
+             p4:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791133/Beachfront_lot_with_palms_20261012154521_eklntl.jpg",
+             p5:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791242/Modern_timber_A-frame_home_20261012154708_luvtvl.jpg",
              p6:"https://res.cloudinary.com/dqo0bc4u/image/upload/v1791791432/Tropical_garden_villa_with_pool_20261012155024_fsfwaw.jpg" };   // hero = poster / fallback still
 const PROPS = [
   {id:"p1", name:"Hillcrest Eco-Lots",  loc:"Tagaytay", type:"Lot",         area:"300 to 600 sqm",   price:"6.2M", g:["#5b7a4a","#c9d8b0"]},
